@@ -1,0 +1,23 @@
+#line plot
+import matplotlib.pyplot as plt
+month=["jan","feb","mar","apr","may","june","julay","aug","sep","oct","nov","dec"]
+profit=[222000,193000,225700,333800,309000,201400,295700,361400,412800,266700,300200,403300]
+plt.plot(month, profit)
+plt.xlabel("month") 
+plt.ylabel("profit") 
+plt.title("Company profit per month")
+plt.grid(True) 
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
+
+#scatter plot
+import matplotlib.pyplot as plt
+month=["jan","feb","mar","apr","may","june","julay","aug","sep","oct","nov","dec"]
+profit=[222000,193000,225700,333800,309000,201400,295700,361400,412800,266700,300200,403300]
+plt.scatter(x=month,y=profit)
+plt.title("Company profit per month")
+plt.xlabel("month") 
+plt.ylabel("profit") 
+plt.grid(True) 
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
