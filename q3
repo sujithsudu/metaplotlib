@@ -9,3 +9,49 @@ sns.distplot(df['total_bill'], kde = False, color ='red', bins = 30)
 
 
 #scatter plot
+import matplotlib.pyplot as plt
+month=["jan","feb","mar","apr","may","june","julay","aug","sep","oct","nov","dec"]
+profit=[222000,193000,225700,333800,309000,201400,295700,361400,412800,266700,300200,403300]
+plt.scatter(x=month,y=profit)
+plt.title("Company profit per month")
+plt.xlabel("month") 
+plt.ylabel("profit") 
+plt.grid(True) 
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
+
+#violin plot
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.random.normal(170, 10, 250)
+data_to_plot = [x]
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+bp = ax.violinplot(data_to_plot)
+plt.show()
+
+#histogram
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show() 
+
+#box plot
+
+import matplotlib.pyplot as plt
+import numpy as np
+np.random.seed(10)
+data_1 = np.random.normal(100, 10, 200)
+data_2 = np.random.normal(90, 20, 200)
+data_3 = np.random.normal(80, 30, 200)
+data_4 = np.random.normal(70, 40, 200)
+data = [data_1, data_2, data_3, data_4]
+fig = plt.figure(figsize =(10, 7))
+ax = fig.add_axes([0, 0, 1, 1])
+bp = ax.boxplot(data)
+plt.show()
