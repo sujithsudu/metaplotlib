@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+month=["jan","feb","mar","apr","may","june","julay","aug","sep","oct","nov","dec"]
+profit=[222000,193000,225700,333800,309000,201400,295700,361400,412800,266700,300200,403300]
+plt.plot(month, profit, label = 'Profit data of last year', 
+      color='r', marker='o', markerfacecolor='k', 
+      linestyle='--', linewidth=3)
+      
+plt.xlabel('Month')
+plt.ylabel('Profit')
+plt.legend(loc='lower right')
+plt.title('Company Sales data of last year')
+plt.xticks(month)
+plt.yticks([100000, 200000, 300000, 400000, 500000])
+plt.show()
