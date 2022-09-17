@@ -1,0 +1,23 @@
+#using matplot
+
+import pandas as pd
+import matplotlib.pyplot as plt
+dataFrame = pd.DataFrame({
+   "Car": ['BMW', 'Lexus', 'Tesla', 'Mustang', 'Mercedes', 'Jaguar'],"Reg_Price": [7000, 1500, 5000, 8000, 9000, 6000]
+})
+
+plt.pie(dataFrame["Reg_Price"], labels = dataFrame["Car"])
+plt.show()
+
+#seaborn
+import matplotlib.pyplot as plt
+import seaborn
+data = [44, 45, 40, 41, 39]
+keys = ['Class 1', 'Class 2', 'CLass 3', 'Class 4', 'Class 5']
+explode = [0, 0.1, 0, 0, 0]
+palette_color = seaborn.color_palette('dark')
+
+plt.pie(data, labels=keys, colors=palette_color,
+		explode=explode, autopct='%.0f%%')
+
+plt.show()
